@@ -444,6 +444,9 @@ public class CanvasCameraView extends Activity implements SurfaceHolder.Callback
 
             bPreviewRunning = true;
         }
+		Camera.Parameters params = m_camera.getParameters();     			
+		params.setColorEffect(Camera.Parameters.EFFECT_MONO); 			
+		m_camera.setParameters(params);
     }
 
     public void surfaceChanged(SurfaceHolder holder, int format, int width, int height)
